@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catálogo - B Confeitaria</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#f0bd8b",
+                        "on-background": "#1b1c1a",
+                        "tertiary": "#755750",
+                        "background": "#fbf9f5",
+                        "inverse-surface": "#30312e",
+                        "on-secondary-container": "#765c5d",
+                        "secondary": "#715859",
+                        "on-tertiary-fixed-variant": "#5c403a",
+                        "on-tertiary-container": "#553a34",
+                        "outline-variant": "#d4c4b7",
+                        "tertiary-fixed-dim": "#e5beb5",
+                        "on-surface": "#1b1c1a",
+                        "primary-fixed": "#ffdcbd",
+                        "surface": "#fbf9f5",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fbf9f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#623f18",
+                        "on-primary-fixed": "#2c1600",
+                        "surface-dim": "#dbdad6",
+                        "outline": "#82756a",
+                        "surface-container-high": "#eae8e4",
+                        "on-secondary": "#ffffff",
+                        "primary": "#7d562d",
+                        "inverse-primary": "#f0bd8b",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#f9d8d8",
+                        "tertiary-fixed": "#ffdad2",
+                        "on-tertiary-fixed": "#2b1611",
+                        "on-secondary-fixed": "#291717",
+                        "primary-container": "#d4a373",
+                        "surface-tint": "#7d562d",
+                        "surface-container": "#efeeea",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#50453b",
+                        "surface-container-low": "#f5f3ef",
+                        "inverse-on-surface": "#f2f0ed",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e4e2de",
+                        "tertiary-container": "#c9a49c",
+                        "secondary-fixed": "#fcdbdb",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#dfbfbf",
+                        "on-secondary-fixed-variant": "#584141",
+                        "surface-variant": "#e4e2de",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#5b3912"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-gap-mobile": "64px",
+                        "section-gap-desktop": "120px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #fbf9f5; color: #1b1c1a; }
+        .b-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .b-divider::before, .b-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #d4c4b7;
+            max-width: 100px;
+        }
+        .b-divider span {
+            margin: 0 1rem;
+            color: #7d562d;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-on-background shadow-sm dark:shadow-none w-full top-0 sticky z-50">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-primary-fixed-dim">
+                B Confeitaria
+            </div>
+<div class="hidden md:flex space-x-8">
+<a class="font-label-md text-label-md uppercase tracking-[0.05em] text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors transition-all duration-300 ease-in-out" href="#">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-[0.05em] text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 transition-all duration-300 ease-in-out" href="#">Catalog</a>
+<a class="font-label-md text-label-md uppercase tracking-[0.05em] text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors transition-all duration-300 ease-in-out" href="#">Our Story</a>
+<a class="font-label-md text-label-md uppercase tracking-[0.05em] text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors transition-all duration-300 ease-in-out" href="#">Contact</a>
+</div>
+<button class="hidden md:inline-flex bg-tertiary text-on-tertiary px-6 py-2 rounded-DEFAULT font-label-md text-label-md uppercase tracking-[0.05em] hover:bg-on-tertiary-container transition-colors">
+                Encomendar
+            </button>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="w-full h-px bg-surface-container-low dark:bg-inverse-surface"></div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max mx-auto px-gutter py-section-gap-mobile md:py-section-gap-desktop w-full">
+<!-- Header Section -->
+<div class="text-center mb-16">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background mb-4">Catálogo de Sabores</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Descubra nossa seleção artesanal de doces finos, bolos delicados e tortas preparadas com os ingredientes mais nobres. Uma experiência poética em cada mordida.
+            </p>
+<div class="b-divider">
+<span>B</span>
+</div>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-md text-label-md tracking-[0.05em] transition-colors">Todos</button>
+<button class="bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest px-6 py-2 rounded-full font-label-md text-label-md tracking-[0.05em] transition-colors border border-outline-variant">Bolos</button>
+<button class="bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest px-6 py-2 rounded-full font-label-md text-label-md tracking-[0.05em] transition-colors border border-outline-variant">Doces</button>
+<button class="bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest px-6 py-2 rounded-full font-label-md text-label-md tracking-[0.05em] transition-colors border border-outline-variant">Tortas</button>
+<button class="bg-surface-container-high text-on-surface-variant hover:bg-surface-container-highest px-6 py-2 rounded-full font-label-md text-label-md tracking-[0.05em] transition-colors border border-outline-variant">Presentes</button>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product Card 1 -->
+<div class="group bg-surface-container-low rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-tertiary/10 border border-surface-container-highest">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A meticulously crafted artisanal chocolate cake, multi-layered with rich ganache, beautifully presented on a vintage ceramic plate. Soft, warm natural lighting from a nearby window highlights the glossy chocolate texture and edible gold leaf accents. Shot in a minimalist, elegant patisserie setting with a soft cream background, reflecting a luxurious, high-end pastry aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOANxrIuJqv_EJGYExKJ_gAb7f4M4hr-6HxhKhG5KUXuLYO1bfOrU0MxEYBZXPVsaupckJOXlaFwFIKL4bZizINXhex2bytJwFB4tmiM3122G46rHK8GI6R35jwB70GH8EQ5P87tLqQe5l3KYBb4ZfARTN6tiCO8zfcSBenuxqBn_I-Hn_85MO31iHpJb6yr3b7bpN_9Eu43XhYGvWLtpHi-PLiGmA_KQprZBkV4_IRKp1Zn5tbXbG"/>
+<span class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">Bolos</span>
+</div>
+<div class="p-6 flex-grow flex flex-col text-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Bolo de Cacau Intenso</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 italic">
+                        "Camadas profundas de cacau puro, abraçadas por uma ganache aveludada. Um poema escuro em forma de doce."
+                    </p>
+<button class="w-full border border-primary text-primary hover:bg-primary hover:text-on-primary py-3 rounded-DEFAULT font-label-md text-label-md uppercase tracking-[0.05em] transition-colors">
+                        Encomendar
+                    </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-surface-container-low rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-tertiary/10 border border-surface-container-highest">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A delicate selection of assorted French macarons in pastel colors (soft pink, ivory, and pistachio green), arranged meticulously in an elegant, shallow gift box. The composition is bathed in gentle, diffused morning light, emphasizing the smooth shells and creamy fillings. Set against a clean, parchment-like textured background to convey an airy, sophisticated artisanal aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxaiL_RIqUlPSsl-fJir6tDXXbOL_E5Brlaq6_CmmeBBDe9SUl0XN0ofkeYUzPF85eDAjXWdKXhc5HY_navNrhIP0eIUHi5DOEfyxb7j5U-3rHgpfmzlS-xbGOr9iAL6SZT_mhDWo_AYDtoPLy3mIat9Px1fxtZjqXw1ISWZJfGpNQXsRjUvKeHaoWpZrFpgCtwULytqSV5EZz8jYsFk3vTkerNx-XaZ234qUMKRaNp8FT0L_v-2_g"/>
+<span class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">Doces</span>
+</div>
+<div class="p-6 flex-grow flex flex-col text-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Macarons Suspiro</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 italic">
+                        "Pequenos sopros de doçura colorida. Crocantes por fora, um abraço cremoso por dentro."
+                    </p>
+<button class="w-full border border-primary text-primary hover:bg-primary hover:text-on-primary py-3 rounded-DEFAULT font-label-md text-label-md uppercase tracking-[0.05em] transition-colors">
+                        Encomendar
+                    </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-surface-container-low rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-tertiary/10 border border-surface-container-highest">
+<div class="aspect-[4/3] overflow-hidden relative">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A rustic yet elegant fruit tart, featuring a golden, buttery crust filled with vanilla pastry cream and topped with fresh, glistening berries (strawberries, blueberries, raspberries) and delicate mint leaves. The tart sits on a simple wooden board amidst a serene, light-filled kitchen environment. The mood is fresh, inviting, and traditionally artisanal, with soft cream tones dominating the palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4_DZUmdj7F_h_EByNM3r_RY11SbrFOFmIG8T082FFY03AHeCw7cU4IZlMKpaC-lqu0K5koAku9vNygJP2obJz-kkSN3ekSUkiuyMyc81LhUn8kw-wEoH-NX45-kNmTBBz54PxfPgcSVJLR34gYXQQRBi0zTo7QjWM8CSXHANA5uOl2o7gBa-_34Xoeq28O7vMAoXBrv3oREUiAje-j7QCAV0m2Pfwt6Dmdz9YJpnxg5__mh75VqEj"/>
+<span class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase">Tortas</span>
+</div>
+<div class="p-6 flex-grow flex flex-col text-center">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Torta Frutas do Bosque</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6 italic">
+                        "O frescor do bosque repousando sobre um leito dourado e amanteigado. Uma canção de outono."
+                    </p>
+<button class="w-full border border-primary text-primary hover:bg-primary hover:text-on-primary py-3 rounded-DEFAULT font-label-md text-label-md uppercase tracking-[0.05em] transition-colors">
+                        Encomendar
+                    </button>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="bg-tertiary text-on-tertiary px-8 py-4 rounded-DEFAULT font-label-md text-label-md uppercase tracking-[0.05em] hover:bg-on-tertiary-container transition-colors shadow-sm">
+                Carregar Mais Delícias
+            </button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-on-background w-full mt-section-gap-desktop border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-gutter py-12 max-w-container-max mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="font-display-lg text-display-lg-mobile text-primary dark:text-primary-fixed-dim mb-4">
+                    B Confeitaria
+                </div>
+<p class="font-body-md text-body-md text-tertiary dark:text-tertiary-fixed-dim">
+                    © 2024 B Confeitaria. Todos os direitos reservados.
+                </p>
+</div>
+<div class="flex flex-col md:flex-row md:space-x-8 space-y-4 md:space-y-0">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Setor Bueno, Goiânia</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">WhatsApp</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Políticas de Privacidade</a>
+</div>
+</div>
+</footer>
+</body></html>

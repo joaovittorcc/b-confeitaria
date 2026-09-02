@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>B Confeitaria - Doçura Artesanal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Plus+Jakarta+Sans:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#f0bd8b",
+                        "on-background": "#1b1c1a",
+                        "tertiary": "#755750",
+                        "background": "#fbf9f5",
+                        "inverse-surface": "#30312e",
+                        "on-secondary-container": "#765c5d",
+                        "secondary": "#715859",
+                        "on-tertiary-fixed-variant": "#5c403a",
+                        "on-tertiary-container": "#553a34",
+                        "outline-variant": "#d4c4b7",
+                        "tertiary-fixed-dim": "#e5beb5",
+                        "on-surface": "#1b1c1a",
+                        "primary-fixed": "#ffdcbd",
+                        "surface": "#fbf9f5",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fbf9f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#623f18",
+                        "on-primary-fixed": "#2c1600",
+                        "surface-dim": "#dbdad6",
+                        "outline": "#82756a",
+                        "surface-container-high": "#eae8e4",
+                        "on-secondary": "#ffffff",
+                        "primary": "#7d562d",
+                        "inverse-primary": "#f0bd8b",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#f9d8d8",
+                        "tertiary-fixed": "#ffdad2",
+                        "on-tertiary-fixed": "#2b1611",
+                        "on-secondary-fixed": "#291717",
+                        "primary-container": "#d4a373",
+                        "surface-tint": "#7d562d",
+                        "surface-container": "#efeeea",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#50453b",
+                        "surface-container-low": "#f5f3ef",
+                        "inverse-on-surface": "#f2f0ed",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e4e2de",
+                        "tertiary-container": "#c9a49c",
+                        "secondary-fixed": "#fcdbdb",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#dfbfbf",
+                        "on-secondary-fixed-variant": "#584141",
+                        "surface-variant": "#e4e2de",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#5b3912"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-gap-mobile": "64px",
+                        "section-gap-desktop": "120px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .tonal-shadow { box-shadow: 0 4px 20px rgba(78, 52, 46, 0.08); }
+        .tonal-shadow-hover:hover { box-shadow: 0 8px 30px rgba(78, 52, 46, 0.12); transform: translateY(-2px); transition: all 0.3s ease; }
+        .zoom-hover img { transition: transform 0.5s ease; }
+        .zoom-hover:hover img { transform: scale(1.05); }
+        .signature-divider { display: flex; align-items: center; justify-content: center; margin: 2rem 0; }
+        .signature-divider::before, .signature-divider::after { content: ''; flex-grow: 1; height: 1px; background-color: #d4c4b7; max-width: 100px; margin: 0 1rem; }
+        .signature-icon { color: #7d562d; font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar Component -->
+<header class="w-full top-0 sticky bg-surface dark:bg-on-background bg-surface-container-low dark:bg-inverse-surface shadow-sm dark:shadow-none transition-all duration-300 ease-in-out z-50">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-primary-fixed-dim">
+                B Confeitaria
+            </div>
+<nav class="hidden md:flex gap-8 items-center font-label-md text-label-md uppercase tracking-[0.05em]">
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:text-primary dark:hover:text-primary-fixed-dim" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:text-primary dark:hover:text-primary-fixed-dim" href="#">Catalog</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:text-primary dark:hover:text-primary-fixed-dim" href="#">Our Story</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:text-primary dark:hover:text-primary-fixed-dim" href="#">Contact</a>
+</nav>
+<button class="hidden md:block bg-tertiary text-on-tertiary px-6 py-3 rounded uppercase font-label-md text-label-md tracking-[0.05em] hover:bg-on-tertiary-container transition-colors">
+                Encomendar
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">menu</span>
+</button>
+</div>
+</header>
+<!-- Hero Section -->
+<main>
+<section class="relative w-full min-h-[819px] flex flex-col md:flex-row items-center max-w-container-max mx-auto px-gutter py-section-gap-mobile md:py-section-gap-desktop gap-12">
+<div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left z-10">
+<span class="inline-block px-4 py-1 mb-6 rounded-full bg-secondary-container text-tertiary font-label-md text-label-md uppercase tracking-[0.05em]">
+                    Artesanal &amp; Exclusivo
+                </span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">
+                    Doçura Artesanal desde 2015
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                    A sofisticação em cada pedaço, criada por Bruna Saddi no Setor Bueno, Goiânia. Ingredientes selecionados e design impecável para momentos inesquecíveis.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<button class="bg-tertiary text-on-tertiary px-8 py-4 rounded uppercase font-label-md text-label-md tracking-[0.05em] hover:bg-on-tertiary-container transition-colors tonal-shadow">
+                        Ver Catálogo Completo
+                    </button>
+<button class="border border-primary text-primary px-8 py-4 rounded uppercase font-label-md text-label-md tracking-[0.05em] hover:bg-primary hover:text-on-primary transition-colors">
+                        Fale Conosco
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full relative">
+<div class="absolute inset-0 bg-primary-fixed-dim rounded-[40%] blur-3xl opacity-20 transform translate-x-10 translate-y-10"></div>
+<div class="relative w-full h-[500px] md:h-[650px] rounded-t-full rounded-b-xl overflow-hidden tonal-shadow border-[8px] border-surface-container-lowest">
+<img alt="Bolo Artesanal Decorado" class="object-cover w-full h-full" data-alt="A beautifully decorated artisanal cake on a ceramic stand, surrounded by soft lighting in a premium boutique bakery setting. The cake features delicate pastel pink frosting, gold leaf accents, and fresh edible flowers. The background is slightly blurred, emphasizing the artisanal details of the confectionery. The overall mood is elegant, warm, and inviting, reflecting a high-end patisserie aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD14cxAfN8lpb-X0J44c0JOItByzz6JT38dOhqjbgrAxO02O8o7xzm3i5NyoYRFm6A0sqOuUQy3IpfPxtKGvtEzBHUVOESnEQ2iiIszlcP9IkWvqX7Bc4a31KhnCUKMCxsDmrJ37T0xZAoWwxzBaVcAHa4v_q6p9TJfsXuS56FHhmzIulHtKd5VqUKoMu-SKyZGjZFFfm8h4MbR9B4S7LEGo1fgczfZobdDYXIdcJ0OvqME4W4phWXR"/>
+</div>
+</div>
+</section>
+<!-- Signature Divider -->
+<div class="signature-divider max-w-container-max mx-auto">
+<span class="signature-icon">B</span>
+</div>
+<!-- Destaques / Categorias (Bento Grid Style) -->
+<section class="max-w-container-max mx-auto px-gutter py-section-gap-mobile md:py-section-gap-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">Nossas Especialidades</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Descubra nossa seleção de produtos criados com paixão e precisão, perfeitos para celebrar a vida e o bom gosto.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:grid-rows-2">
+<!-- Bolos Festivos (Large Card) -->
+<div class="md:col-span-2 md:row-span-2 relative rounded-2xl overflow-hidden bg-[#F9F5F0] tonal-shadow-hover zoom-hover group cursor-pointer min-h-[400px]">
+<div class="absolute inset-0">
+<img alt="Bolos Festivos" class="object-cover w-full h-full opacity-90 group-hover:opacity-100 transition-opacity" data-alt="A majestic tiered festive cake adorned with intricate sugar flowers and subtle gold details, placed on a marble countertop in a bright, airy bakery with soft natural lighting. The scene exudes luxury and celebration, highlighting the craftsmanship of the artisanal cake design in a light-mode, minimalist setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjfylRHZwgQsl1VC8OoryjHO-v-8FiFdWk0zVE0d3XJaTRkFqGCeRrVYcRrSM_6mT2bGlyAMUR6-5iEfEwpBzE7OowaeYAQAxg14qRsPY2s3tWEL5iM7nngrgbYtpy3kEQppnnfm7-0dpFZKfts_kp30HfIFFkBu9KN3Z199y1MrJv_gih66TO7HSkYwuMpvmWpn92mrvBFHbCixPwge8VPryMhn6oWpm9lk_B9e9lnnukd5yx3Ugm"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8">
+<span class="inline-block px-3 py-1 mb-3 rounded-full bg-secondary-container/90 text-tertiary font-label-md text-label-md uppercase tracking-[0.05em] text-xs">
+                            Celebração
+                        </span>
+<h3 class="font-headline-sm text-headline-sm text-surface-container-lowest mb-2">Bolos Festivos</h3>
+<p class="font-body-md text-body-md text-surface-variant max-w-md hidden md:block">Obras de arte comestíveis para casamentos, aniversários e datas especiais.</p>
+</div>
+</div>
+<!-- Doces Finos -->
+<div class="relative rounded-2xl overflow-hidden bg-[#F9F5F0] tonal-shadow-hover zoom-hover group cursor-pointer min-h-[250px]">
+<div class="absolute inset-0">
+<img alt="Doces Finos" class="object-cover w-full h-full opacity-90 group-hover:opacity-100 transition-opacity" data-alt="A close-up shot of an assortment of fine artisanal chocolates and elegant truffles displayed on a delicate vintage plate. The lighting is soft and focused, creating a premium, tactile feel. Subtle hints of gold and blush pink complement the rich chocolate tones in a sophisticated bakery atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvltkGGw_N-8DIaoMwxe0FdNuwaEwyFnbuqVOYqlU20ZMEM8VNGoB5tqIcc4synQ8OdhzofbadwDFdRoQ5UeDvHgwfx6P5LVro7XbtRiRCSiH1mez9rpNLQF8s0Iqpm6Uzs94qdnybCIeguun-zWeJr5JP075HF6WW_CpwqC8n6-q8pi7xqdsWAl0al-gZyq5jZ_fhWEoKYooLc7OrcXocKXsg1-t_iO5NbQ5pi-JOSAE3VxrvwS-d"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-headline-sm text-headline-sm text-surface-container-lowest">Doces Finos</h3>
+</div>
+</div>
+<!-- Tortas Artesanais -->
+<div class="relative rounded-2xl overflow-hidden bg-[#F9F5F0] tonal-shadow-hover zoom-hover group cursor-pointer min-h-[250px]">
+<div class="absolute inset-0">
+<img alt="Tortas Artesanais" class="object-cover w-full h-full opacity-90 group-hover:opacity-100 transition-opacity" data-alt="A beautifully sliced artisanal tart showcasing a crisp pastry shell filled with rich cream and topped with glistening fresh berries and a hint of mint. The tart sits on a rustic wooden board bathed in warm, diffused natural light, conveying a sense of homemade luxury and high-quality ingredients." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjtDbEwJGLylnOKaoW36XtjqLmSf73-LMn5_zogMsDYJA2eOVBjcX5YH87kE5gzzC0_ntscm9DSWpHm0guX_j5PMMPnYeICgx2c-Om4DD2H4XjbpKQupavBY1msp8_zVNYii970JHNCWdid-NtjO7w_202VMa7hK8wHygQiEJeYfv6s-BQ-ZCuQzeF9L4YLUg-0G5bFhHGSGgop8eglpldRggnBqObs_Aq5NCwXg9Ib24JjW3UEjUj"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="font-headline-sm text-headline-sm text-surface-container-lowest">Tortas Artesanais</h3>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full mt-section-gap-desktop bg-surface-container-highest dark:bg-on-background bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-gutter py-12 max-w-container-max mx-auto opacity-80 hover:opacity-100 transition-opacity">
+<div class="font-display-lg text-display-lg-mobile text-primary dark:text-primary-fixed-dim mb-6 md:mb-0">
+                B Confeitaria
+            </div>
+<div class="flex flex-col md:flex-row gap-4 md:gap-8 font-body-md text-body-md text-tertiary dark:text-tertiary-fixed-dim">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Setor Bueno, Goiânia</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Instagram</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">WhatsApp</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Políticas de Privacidade</a>
+</div>
+<div class="mt-8 md:mt-0 font-body-md text-body-md text-tertiary dark:text-tertiary-fixed-dim text-on-surface-variant dark:text-surface-variant">
+                © 2024 B Confeitaria. Todos os direitos reservados.
+            </div>
+</div>
+</footer>
+</body></html>

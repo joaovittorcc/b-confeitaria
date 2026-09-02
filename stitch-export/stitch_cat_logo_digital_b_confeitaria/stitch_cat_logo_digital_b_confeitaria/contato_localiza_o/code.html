@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contato - B Confeitaria</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#f0bd8b",
+                        "on-background": "#1b1c1a",
+                        "tertiary": "#755750",
+                        "background": "#fbf9f5",
+                        "inverse-surface": "#30312e",
+                        "on-secondary-container": "#765c5d",
+                        "secondary": "#715859",
+                        "on-tertiary-fixed-variant": "#5c403a",
+                        "on-tertiary-container": "#553a34",
+                        "outline-variant": "#d4c4b7",
+                        "tertiary-fixed-dim": "#e5beb5",
+                        "on-surface": "#1b1c1a",
+                        "primary-fixed": "#ffdcbd",
+                        "surface": "#fbf9f5",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fbf9f5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#623f18",
+                        "on-primary-fixed": "#2c1600",
+                        "surface-dim": "#dbdad6",
+                        "outline": "#82756a",
+                        "surface-container-high": "#eae8e4",
+                        "on-secondary": "#ffffff",
+                        "primary": "#7d562d",
+                        "inverse-primary": "#f0bd8b",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#f9d8d8",
+                        "tertiary-fixed": "#ffdad2",
+                        "on-tertiary-fixed": "#2b1611",
+                        "on-secondary-fixed": "#291717",
+                        "primary-container": "#d4a373",
+                        "surface-tint": "#7d562d",
+                        "surface-container": "#efeeea",
+                        "error-container": "#ffdad6",
+                        "on-surface-variant": "#50453b",
+                        "surface-container-low": "#f5f3ef",
+                        "inverse-on-surface": "#f2f0ed",
+                        "on-error-container": "#93000a",
+                        "surface-container-highest": "#e4e2de",
+                        "tertiary-container": "#c9a49c",
+                        "secondary-fixed": "#fcdbdb",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#dfbfbf",
+                        "on-secondary-fixed-variant": "#584141",
+                        "surface-variant": "#e4e2de",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#5b3912"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "section-gap-mobile": "64px",
+                        "section-gap-desktop": "120px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-divider {
+            position: relative;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .signature-divider::before,
+        .signature-divider::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 45%;
+            height: 1px;
+            background-color: theme('colors.outline-variant');
+        }
+        .signature-divider::before { left: 0; }
+        .signature-divider::after { right: 0; }
+        .signature-icon {
+            display: inline-block;
+            color: theme('colors.primary');
+            background-color: theme('colors.background');
+            padding: 0 1rem;
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface dark:bg-on-background w-full top-0 sticky bg-surface-container-low dark:bg-inverse-surface shadow-sm dark:shadow-none transition-all duration-300 ease-in-out z-50">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<a class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-primary-fixed-dim" href="#">
+                B Confeitaria
+            </a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md uppercase tracking-[0.05em] text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-[0.05em] text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Catalog</a>
+<a class="font-label-md text-label-md uppercase tracking-[0.05em] text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Our Story</a>
+<a class="font-label-md text-label-md uppercase tracking-[0.05em] text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="#">Contact</a>
+</div>
+<button class="hidden md:block bg-tertiary text-on-tertiary font-label-md text-label-md uppercase tracking-[0.05em] px-6 py-3 rounded hover:opacity-90 transition-opacity">
+                Encomendar
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter pt-12 md:pt-24 pb-12 text-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">Entre em Contato</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Estamos prontos para adoçar o seu dia. Visite nossa boutique no Setor Bueno ou envie-nos uma mensagem para encomendas personalizadas.
+            </p>
+<div class="signature-divider max-w-md mx-auto mt-8">
+<span class="material-symbols-outlined signature-icon text-xl" data-icon="bakery_dining">bakery_dining</span>
+</div>
+</section>
+<!-- Main Content Area -->
+<section class="max-w-container-max mx-auto px-gutter py-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
+<!-- Contact Info & Map -->
+<div class="space-y-12">
+<div class="bg-[#F9F5F0] p-8 rounded-lg shadow-sm border border-outline-variant/30 relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md text-tertiary mb-6">Informações de Visita</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="location_on">location_on</span>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold mb-1">Endereço</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                        Rua T-37, Ed. Bella Ciao, Térreo<br/>
+                                        Setor Bueno, Goiânia - GO<br/>
+                                        CEP: 74230-025
+                                    </p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1" data-icon="schedule">schedule</span>
+<div>
+<h3 class="font-label-md text-label-md text-on-surface font-semibold mb-1">Horário de Funcionamento</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                                        Segunda - Sexta: 09h às 19h<br/>
+                                        Sábado: 09h às 17h<br/>
+                                        Domingo: Fechado
+                                    </p>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/50">
+<a class="inline-flex items-center justify-center w-full gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white font-label-md text-label-md uppercase tracking-[0.05em] px-6 py-4 rounded transition-colors shadow-sm hover:shadow-md" href="https://wa.me/5562999999999" target="_blank">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                                    Fale no WhatsApp
+                                </a>
+</div>
+</div>
+</div>
+<!-- Stylized Map Placeholder -->
+<div class="relative h-64 md:h-80 rounded-lg overflow-hidden shadow-sm border border-outline-variant/30 group">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-700 group-hover:scale-105" data-alt="A highly stylized, elegant map illustration of Setor Bueno, Goiânia, rendered in soft pastel and chocolate tones. The map highlights key streets with subtle cream lines against a warm beige background, with a distinguished gold pin indicating a boutique bakery location. The lighting is soft and flat, emphasizing the graphic, artisanal quality of the map design." data-location="Goiânia" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCjjWti_d-T-aXBhmdXEXA4fKzjc67VRXA9ViFssq4T4mgZ0CZlVywAMWl47Sqkw16vPqUiSWR0cCTe-qZwppw-HLiijGfRKlgsntHn_3Ad5TWyQuaVTA7-E2aTH3RoTAd63Q1RmlV07D2oW8wnSw3Zdg-7KDgQOyyl_D1GzIcuNvBLYgc4RlHReK0Wgc5sQsNfKs-8VKqapnGX0WIuUOKVuKmRrV78xh35HJHPcKWPgxy8lgm6bJfJ')"></div>
+<div class="absolute inset-0 bg-tertiary/10 mix-blend-multiply pointer-events-none"></div>
+<div class="absolute top-4 right-4 bg-surface/90 backdrop-blur px-3 py-1 rounded shadow-sm text-sm font-label-md text-tertiary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="map">map</span> Setor Bueno
+                        </div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="bg-surface-container-lowest p-8 lg:p-12 rounded-xl shadow-sm border border-outline-variant/20">
+<h2 class="font-headline-md text-headline-md text-tertiary mb-2">Envie uma Mensagem</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Dúvidas sobre encomendas ou orçamentos para eventos? Preencha o formulário abaixo.</p>
+<form class="space-y-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2 uppercase tracking-[0.05em]" for="name">Nome Completo</label>
+<input class="w-full bg-transparent border-0 border-b border-secondary/30 focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-on-surface placeholder-on-surface-variant/50 transition-colors" id="name" placeholder="Seu nome" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2 uppercase tracking-[0.05em]" for="email">E-mail</label>
+<input class="w-full bg-transparent border-0 border-b border-secondary/30 focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-on-surface placeholder-on-surface-variant/50 transition-colors" id="email" placeholder="seu@email.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2 uppercase tracking-[0.05em]" for="phone">Telefone / WhatsApp</label>
+<input class="w-full bg-transparent border-0 border-b border-secondary/30 focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-on-surface placeholder-on-surface-variant/50 transition-colors" id="phone" placeholder="(62) 99999-9999" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2 uppercase tracking-[0.05em]" for="subject">Assunto</label>
+<select class="w-full bg-transparent border-0 border-b border-secondary/30 focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-on-surface transition-colors" id="subject">
+<option value="encomenda">Encomendas</option>
+<option value="evento">Eventos e Casamentos</option>
+<option value="duvida">Dúvidas Gerais</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-2 uppercase tracking-[0.05em]" for="message">Mensagem</label>
+<textarea class="w-full bg-transparent border-0 border-b border-secondary/30 focus:border-primary focus:ring-0 px-0 py-2 font-body-md text-on-surface placeholder-on-surface-variant/50 transition-colors resize-none" id="message" placeholder="Como podemos ajudar?" rows="4"></textarea>
+</div>
+<button class="w-full bg-tertiary text-on-tertiary font-label-md text-label-md uppercase tracking-[0.05em] px-6 py-4 rounded hover:opacity-90 hover:shadow-md transition-all duration-300 mt-4 flex items-center justify-center gap-2" type="submit">
+                            Enviar Mensagem
+                            <span class="material-symbols-outlined text-[20px]" data-icon="send">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-on-background w-full mt-section-gap-desktop bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center px-gutter py-12 max-w-container-max mx-auto opacity-80 hover:opacity-100 transition-opacity">
+<div class="mb-6 md:mb-0">
+<span class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary dark:text-primary-fixed-dim block mb-2">B Confeitaria</span>
+<p class="font-body-md text-body-md text-tertiary dark:text-tertiary-fixed-dim">
+                    © 2024 B Confeitaria. Todos os direitos reservados.
+                </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Setor Bueno, Goiânia</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">WhatsApp</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Políticas de Privacidade</a>
+</div>
+</div>
+</footer>
+</body></html>
